@@ -7,6 +7,7 @@ import {HeaderLayout} from "./Layouts/HeaderLayout";
 import {Footer} from "antd/es/layout/layout";
 import {Form, Layout} from "antd";
 import {FormM} from "./Layouts/FormM";
+import Card from "./Layouts/Card";
 function App() {
   return (
       <Layout>
@@ -15,7 +16,8 @@ function App() {
         </>
         <div style={{ padding: '100px 50px 50px 50px'
         }}>
-         <FormM/>
+            <Card/>
+         {/*<FormM/>*/}
         </div>
         <Footer style={{ textAlign: 'center' }}>Zaporojan Petru</Footer>
       </Layout>
