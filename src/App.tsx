@@ -1,9 +1,9 @@
 import React from 'react';
-import logo from './logo.svg';
+
 import './App.css';
 import 'antd/dist/antd.css'
 import {HeaderLayout} from "./Layouts/HeaderLayout";
-import Card from "./Layouts/Card";
+
 import {Footer} from "antd/es/layout/layout";
 import {Form, Layout} from "antd";
 import {FormM} from "./Layouts/FormM";
