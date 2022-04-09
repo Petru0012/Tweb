@@ -1,18 +1,26 @@
 
-import { Card, Col } from 'antd'
-function CustomCard({title, comment}:{title:string,comment:string}) {
-
+import {Card, Checkbox, Col, Input} from 'antd'
+import {observer} from "mobx-react-lite";
+import {useEffect} from "react";
+import {IContentModel} from "../Interface/interfaces";
+export const CustomCard=observer(({content}:{content:IContentModel}) =>{
+        const {title,comment,notes,changeNotes,isSeen,changeSeen} =content
+    useEffect(()=>{
+    alert("A vazut contentul"+title)
+},[title])
     return (
 
-        <Col span={8}>
-            <div style={{ paddingBottom: '8px',paddingTop:'8px'}}>
-                <Card title={title} bordered={false}>
-                    {comment}
-                </Card>
-            </div>
-        </Col>
+        <Card title={title} bordered={false}>
+            {comment}
+            <Input value={notes}
+                   placeholder={notes}
+                   onChange={(e)=>changeNotes(e.target.value)}
+            />
+            <Checkbox defaultChecked={ isSeen } checked={isSeen} onChange={(e)=>changeSeen(e.target.checked)}/>
+
+        </Card>
 
     )
 }
+)
 
-export default CustomCard
