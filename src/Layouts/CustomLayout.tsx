@@ -1,6 +1,6 @@
 
 import { Card, Col } from 'antd'
-function CustomCard({title, comment}) {
+function CustomCard({title, comment}:{title:string,comment:string}) {
 
     return (
 
