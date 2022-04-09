@@ -1,6 +1,6 @@
 import {types} from "mobx-state-tree";
 
-export const  ContentModel = types.model('Content',{
+export const  ContentModel = types.model('ContentModel',{
     id:types.identifier,
     title:'',
     comment:'',
@@ -12,7 +12,7 @@ export const  ContentModel = types.model('Content',{
         get isSeen(){
             return self.seen
         },
-        FindTitle(param:any){
+        FindInTitle(param:any){
             self.title.includes(param)
         }
     }))

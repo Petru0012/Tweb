@@ -1,6 +1,6 @@
 import RootStore from "./RootStore.store";
 export const storeProvider=RootStore.create({
-    comment: [
+    contents: [
         {
             id: '1',
             title: "Card 1",
@@ -20,7 +20,7 @@ export const storeProvider=RootStore.create({
             title: "Card 3",
             comment: "comment",
             notes: '',
-            seen: false,
+            seen: true,
         },
     ]
 })
